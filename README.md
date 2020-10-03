@@ -55,7 +55,9 @@ Content-Type: application/json
 
 ## Acompanhe-me nas redes sociais
 
-<p align="left">
-  <a href="https://twitter.com/vitorsemidio/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="/twitter vitorsemidio" height="30" width="30" /></a>&nbsp &nbsp
-  <a href="https://linkedin.com/in/vitorsemidio/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="Linkedin - Vitor Emidio" height="30" width="30" /></a>&nbsp &nbsp
-</p>
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/vitorsemidio/)](https://www.linkedin.com/in/vitorsemidio/)
+[![Twitter Badge](https://img.shields.io/badge/-Twitter-blue?style=flat-square&logo=Twitter&logoColor=white&link=https://www.twitter.com/vitorsemidio/)](https://www.twitter.com/vitorsemidio)
+
+## Licença
+
+[**MIT**](./LICENSE)
