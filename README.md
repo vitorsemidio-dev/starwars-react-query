@@ -1,68 +1,61 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- @format -->
 
-## Available Scripts
+<h1 align="center">
+    <img src="./.github/star-wars-logo.png">
+</h1>
 
-In the project directory, you can run:
+# Star Wars
 
-### `yarn start`
+Aplicação para consulta de dados fornecidos pela API do Star Wars, **swapi**. Foi utilizado a biblioteca **React-query** para manipular o gerenciamento dos dados assíncronos fornecidos pela API.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Aplicação
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<h2>
+    <img src="./.github/app.gif">
+</h2>
 
-### `yarn test`
+## React-query
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### useQuery
 
-### `yarn build`
+O hook **useQuery** retorna `data`, _onde possui os dados do que foi retornado do request_; `status`, _para informar o se os possíveis status da requisição: "loading", "error", "success"_
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Após a primeira requisição dos dados, a mensagem de "loading" não aparece mesmo o hook **useQuery** fazendo o fetching. Isso porque os dados já foram carregados uma vez. Se houver alguma mudança no retorno desses dados, é mostrado os dados atualizados e feito cache com esses novos dados. Isso propõe uma boa experiência ao usuário para não ficar o tempo todo vendo mensagem de "loading"
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### usePaginatedQuery
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+É um hook parecido com o anterior, porém ele nos fornece melhores recursos para gerenciar paginação.
 
-### `yarn eject`
+O hook **usePaginatedQuery** nos retorna `resolvedData`, _onde é guardado os dados da última requisição que houve sucesso_;`latestData` _é onde fica armazenado os dados atuais que estão na query. É **undefined** até o fetch ser completado. E quando isso ocorre, os dados em `resolvedData` são atualizados. Dessa forma o usuário continua vendo os antigos até a nova requisição ser completada_.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Documentação swapi
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para saber sobre os demais dados fornecidos, acesse a documentação do [swapi](https://swapi.dev/documentation)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Recursos da API
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**swapi** fornece dados dos seguintes recursos:
 
-## Learn More
+```
+HTTP/1.0 200 OK
+Content-Type: application/json
+{
+    "films": "https://swapi.dev/api/films/",
+    "people": "https://swapi.dev/api/people/",
+    "planets": "https://swapi.dev/api/planets/",
+    "species": "https://swapi.dev/api/species/",
+    "starships": "https://swapi.dev/api/starships/",
+    "vehicles": "https://swapi.dev/api/vehicles/"
+}
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Referências
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [The Net Ninja - React Query Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jpi7Ptjl5b50p9gLjOFani)
 
-### Code Splitting
+## Acompanhe-me nas redes sociais
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<p align="left">
+  <a href="https://twitter.com/vitorsemidio/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="/twitter vitorsemidio" height="30" width="30" /></a>&nbsp &nbsp
+  <a href="https://linkedin.com/in/vitorsemidio/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="Linkedin - Vitor Emidio" height="30" width="30" /></a>&nbsp &nbsp
+</p>
